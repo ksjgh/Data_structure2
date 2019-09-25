@@ -29,7 +29,9 @@ void createTree(void)
     int i;
 
     // TODO
-    scanf("%d %d", &vertex, &edge);
+//    scanf("%d %d", &vertex, &edge);
+//    printf("%d %d \n",vertex,edge);
+
     for(i=1; i<=edge ; i++){
         int p,c;
         scanf("%d %d", &p, &c);
@@ -43,6 +45,7 @@ void createTree(void)
 
         PN[c] = p;
     }
+    printf("Tree is created\n");
 
 }
 
@@ -66,7 +69,8 @@ void TR(int n)
         return;
     }
 
-    printf("%d",n);
+    ++cnt;
+    printf("%d\t",n);
     TR(CL[n]);
     TR(CR[n]);
 }

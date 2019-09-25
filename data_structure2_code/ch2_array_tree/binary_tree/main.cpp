@@ -2,14 +2,21 @@
 #include "tree.h"
 
 int main(void) {
+    //int vertex, edge;
+    int vertex;
+    int edge;
+
     freopen("data.txt", "r", stdin);
 
+//    scanf("%d %d", &vertex, &edge);
+//    printf("%d %d\n", (int)vertex, (int)edge);
+
     createTree();
-    printf("노드 순회 : ");
-//    TR(1);
+    printf("Node visit test : ");
+    TR(1);
     printf("\n");
-    printf("방문한 노드 수 : %d\n", cnt);
-    printf("5의 조상 : ") ;
+//    printf("number of visited nodes : %d\n", cnt);
+//    printf("ancester of 5 : ");
 //    FND(5);
 
     return 0;
