@@ -29,7 +29,7 @@ void createTree(void)
     int i;
 
     // TODO
-//    scanf("%d %d", &vertex, &edge);
+    scanf("%d %d", &vertex, &edge);
 //    printf("%d %d \n",vertex,edge);
 
     for(i=1; i<=edge ; i++){

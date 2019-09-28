@@ -5,6 +5,7 @@ CONFIG -= qt
 
 SOURCES += \
     main.cpp \
+    temp.cpp \
     tree.cpp
 
 HEADERS += \

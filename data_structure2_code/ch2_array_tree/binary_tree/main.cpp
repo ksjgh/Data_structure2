@@ -15,9 +15,10 @@ int main(void) {
     printf("Node visit test : ");
     TR(1);
     printf("\n");
-//    printf("number of visited nodes : %d\n", cnt);
-//    printf("ancester of 5 : ");
-//    FND(5);
+    printf("number of visited nodes : %d\n", cnt);
+    printf("ancester of 5 : ");
+    FND(5);
+    printf("\n");
 
     return 0;
 }
