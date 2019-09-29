@@ -138,18 +138,34 @@ Returns 		: 없음
 //}
 
 // my sol
-void inorderTraverse(Node *np)
-{
-    // TODO
-    
-
-}
-
-//// ref sol
 //void inorderTraverse(Node *np)
 //{
 //    // TODO
+//    if(np==NULL){
+//        return;
+//    }
+
+//    // visit left subtree
+//    inorderTraverse(np->left);
+
+//    // print this node data
+//    printf("%d\t",np->data);
+
+//    // visit right subtree
+//    inorderTraverse(np->right);
 //}
+
+// ref sol
+void inorderTraverse(Node *np)
+{
+    // TODO
+    if(np != NULL){
+        inorderTraverse(np->left);
+        printf("%4d",np->data);
+        inorderTraverse(np->right);
+    }
+
+}
 
 
 /* --------------------------------------------------------------------------------------
@@ -163,17 +179,34 @@ Returns 		: 없음
 //}
 
 // my sol
-void preorderTraverse(Node *np)
-{
-    // TODO
-}
-
-// ref sol
 //void preorderTraverse(Node *np)
 //{
 //    // TODO
+
+//    if(np==NULL){
+//        return;
+//    }
+
+//    // print current node
+//    printf("%d\t",np->data);
+
+//    // visit left subtree
+//    preorderTraverse(np->left);
+
+//    // visit right subtree
+//    preorderTraverse(np->right)
 //}
 
+// ref sol
+void preorderTraverse(Node *np)
+{
+    // TODO
+    if(np != NULL){
+        printf("%4d",np->data);
+        preorderTraverse(np->left);
+        preorderTraverse(np->right);
+    }
+}
 
 
 /* --------------------------------------------------------------------------------------
@@ -186,16 +219,34 @@ Returns 		: 없음
 //    // TODO
 //}
 
-void postorderTraverse(Node *np)
-{
-    // TODO
-}
-
-//// ref sol
 //void postorderTraverse(Node *np)
 //{
 //    // TODO
+//    if(np==NULL){
+//        return;
+//    }
+
+//    // visit left subtree
+//    postorderTraverse(np->left);
+
+//    // visit right subtree
+//    postorderTraverse(np->right);
+
+//    // print current node
+//    printf("%d\n",np->data);
 //}
+
+// ref sol
+void postorderTraverse(Node *np)
+{
+    // TODO
+    if(np != NULL){
+        postorderTraverse(np->left);
+        postorderTraverse(np->right);
+        printf("%4d",np->data);
+    }
+
+}
 
 
 /* --------------------------------------------------------------------------------------

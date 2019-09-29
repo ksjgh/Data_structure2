@@ -209,6 +209,7 @@ void preorderTraverse(Node *np)
 }
 
 
+
 /* --------------------------------------------------------------------------------------
 Function name 	: postorderTraverse - 후위순회
 Parameters		: np - 방문할 노드의 주소
@@ -219,34 +220,28 @@ Returns 		: 없음
 //    // TODO
 //}
 
-//void postorderTraverse(Node *np)
-//{
-//    // TODO
-//    if(np==NULL){
-//        return;
-//    }
-
-//    // visit left subtree
-//    postorderTraverse(np->left);
-
-//    // visit right subtree
-//    postorderTraverse(np->right);
-
-//    // print current node
-//    printf("%d\n",np->data);
-//}
-
-// ref sol
 void postorderTraverse(Node *np)
 {
     // TODO
-    if(np != NULL){
-        postorderTraverse(np->left);
-        postorderTraverse(np->right);
-        printf("%4d",np->data);
+    if(np==NULL){
+        return;
     }
 
+    // visit left subtree
+    postorderTraverse(np->left);
+
+    // visit right subtree
+    postorderTraverse(np->right);
+
+    // print current node
+    printf("%d\n",np->data);
 }
+
+//// ref sol
+//void postorderTraverse(Node *np)
+//{
+//    // TODO
+//}
 
 
 /* --------------------------------------------------------------------------------------
