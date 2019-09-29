@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "tree.h"
+
+void initTree(Tree* tp)
+{
+    tp->root = NULL;
+    tp->nodeCnt = 0;
+}
+
+Node* makeNode(int data, Node* left, Node* right)
+{
+    Node* np;
+    np = (Node*)malloc(sizeof(Node));
+    if(np != NULL)
+    {
+        np->data = data;
+        np->left = left;
+        np->right = right;
+    }
+    return np;
+}
+
