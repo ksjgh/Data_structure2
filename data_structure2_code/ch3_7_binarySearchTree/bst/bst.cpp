@@ -255,14 +255,55 @@ Parameters		: tp - Tree 구조체의 주소
            data - 검색할 데이터
 Returns 		: 찾은 노드의 주소 / 못찾으면 NULL pointer
 ---------------------------------------------------------------------------------------*/
+//Node * searchNode(Tree *tp, int data)
+//{
+//    Node *node;
+
+//    // TODO
+
+//    return NULL; // 리턴값은 수정해주세요.
+//}
+
+//// my sol
+//Node * searchNode(Tree *tp, int data)
+//{
+//    // TODO
+//    Node* curp = tp->root;
+
+//    while(curp != NULL ){
+//        if(curp->data == data){
+//            return curp;
+//        }
+//        else if( data < curp->data ){
+//            curp = curp->left;
+//        }
+//        else {
+//            curp = curp->right;
+//        }
+//    }
+
+//    return NULL; // 리턴값은 수정해주세요.
+//}
+
+// ref sol
 Node * searchNode(Tree *tp, int data)
 {
     Node *node;
 
     // TODO
+    node = tp->root;
+    while( (node != NULL) && (node->data != data)){
+        if( data < node->data ){
+            node = node->left;
+        }
+        else{
+            node = node->right;
+        }
+    }
 
-    return NULL; // 리턴값은 수정해주세요.
+    return node; // 리턴값은 수정해주세요.
 }
+
 /* --------------------------------------------------------------------------------------
 Function name 	: deleteNode - data에 해당하는 노드 삭제
 Parameters		: tp - Tree 구조체의 주소

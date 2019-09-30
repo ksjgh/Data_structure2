@@ -32,26 +32,30 @@ int main()
 	postorderTraverse(mytree.root); // 실제 첫번째 데이터노드의 주소 전달
 	printf("\n\n");
 
-//	// 노드 검색
-//	searchData = 3;
-//	resp = searchNode(&mytree, searchData);
-//	if (resp != NULL) printf("%d 찾음!!\n\n", resp->data);
-//	else printf("%d 못찾음!!\n\n", searchData);
+    // 노드 검색
+    // find O
+    searchData = 3;
+    resp = searchNode(&mytree, searchData);
+    if (resp != NULL) printf("%d 찾음!!\n\n", resp->data);
+    else printf("%d 못찾음!!\n\n", searchData);
 
-//	searchData = 99;
-//	resp = searchNode(&mytree, searchData);
-//	if (resp != NULL) printf("%d 찾음!!\n\n", resp->data);
-//	else printf("%d 못찾음!!\n\n", searchData);
+    // find X
+    searchData = 99;
+    resp = searchNode(&mytree, searchData);
+    if (resp != NULL) printf("%d 찾음!!\n\n", resp->data);
+    else printf("%d 못찾음!!\n\n", searchData);
 
-//	searchData = 19;
-//	resp = searchNode(&mytree, searchData);
-//	if (resp != NULL) printf("%d 찾음!!\n\n", resp->data);
-//	else printf("%d 못찾음!!\n\n", searchData);
+    // find X
+    searchData = 19;
+    resp = searchNode(&mytree, searchData);
+    if (resp != NULL) printf("%d 찾음!!\n\n", resp->data);
+    else printf("%d 못찾음!!\n\n", searchData);
 
-//	searchData = 23;
-//	resp = searchNode(&mytree, searchData);
-//	if (resp != NULL) printf("%d 찾음!!\n\n", resp->data);
-//	else printf("%d 못찾음!!\n\n", searchData);
+    // find O
+    searchData = 23;
+    resp = searchNode(&mytree, searchData);
+    if (resp != NULL) printf("%d 찾음!!\n\n", resp->data);
+    else printf("%d 못찾음!!\n\n", searchData);
 
 //	// 노드 삭제
 //	printf("Node 삭제...\n");
