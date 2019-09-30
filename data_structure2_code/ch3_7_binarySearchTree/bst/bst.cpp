@@ -310,15 +310,91 @@ Parameters		: tp - Tree 구조체의 주소
                   data - 삭제할 데이터
 Returns 		: 삭제한 노드의 주소 / 못찾으면(삭제 실패 시) NULL pointer
 ---------------------------------------------------------------------------------------*/
+//Node * deleteNode(Tree *tp,int data)
+//{
+//    Node *parent;  // 삭제할 노드의 부모노드
+//    Node *son;     // 삭제할 노드대신 자식노릇을 할 노드의 주소 저장
+//    Node *del;     // 삭제할 노드
+
+//        // TODO
+
+//        return NULL;
+//}
+
+//// my sol
+//Node * deleteNode(Tree *tp,int data)
+//{
+//    Node *parent;  // 삭제할 노드의 부모노드
+//    Node *son;     // 삭제할 노드대신 자식노릇을 할 노드의 주소 저장
+//    Node *del;     // 삭제할 노드
+
+//    // TODO
+//    del = searchNode( tp, data );
+//    if( del != NULL){
+//        if( del == tp->root ){
+//            ;
+//        }
+//        else{
+//            ;
+//        }
+//    }
+
+//    return del;
+//}
+
+// ref sol
 Node * deleteNode(Tree *tp,int data)
 {
     Node *parent;  // 삭제할 노드의 부모노드
     Node *son;     // 삭제할 노드대신 자식노릇을 할 노드의 주소 저장
     Node *del;     // 삭제할 노드
 
-        // TODO
+    // TODO
+    parent = del = tp->root;
+    while( del != NULL ){
+        if( data == del->data ){
+            break;
+        }
 
+        parent = del;
+        if( data < del->data ){
+            del = del->left;
+        }
+        else{
+            del = del->right;
+        }
+    }
+    if(del == NULL) return NULL;
+
+    // type1 , 삭제할 노드 오른쪽 자식이 없는 경우
+    if(del->right==NULL){
+        son = del->left;
+    }
+    // type2 , 삭제한 노드의 오른족 자식의 왼쪽 자식이 없는 경우
+    else if( del->right->left==NULL){
+        son = del->right;
+        son->left = del->left;
+    }
+
+    // type3 , 그 외의 모든 경우
+    if(del==tp->root){
+        tp->root = son;
+    }
+    else if(son->data < parent->data){
+        parent->left = son;
+    }
+    else{
+        parent->right = son;
+    }
+
+    if( del != NULL ){
+        free(del);
+        --tp->nodeCnt;
+        retturn del;
+    }
+    else
         return NULL;
+
 }
 
 /* --------------------------------------------------------------------------------------
